@@ -1,0 +1,27 @@
+Instead of using `@apply` with pseudo-selectors, apply the styles directly in your CSS. For example:
+
+```css
+.my-button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded;
+}
+
+.my-button:hover {
+  @apply bg-blue-700;
+}
+```
+
+Should be changed to:
+
+```css
+.my-button {
+  background-color: blue;
+  text-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.my-button:hover {
+  background-color: rgb(59, 130, 246);
+}
+```
+This ensures that the hover styles are correctly applied.
